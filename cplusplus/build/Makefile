@@ -339,7 +339,7 @@ endif
 
 quiet_cmd_regen_makefile = ACTION Regenerating $@
 cmd_regen_makefile = cd $(srcdir); /mnt/c/Users/User/AppData/Roaming/npm/node_modules/node-gyp/gyp/gyp_main.py -fmake --ignore-environment "-Dlibrary=shared_library" "-Dvisibility=default" "-Dnode_root_dir=/home/davidfekke/.cache/node-gyp/20.8.1" "-Dnode_gyp_dir=/mnt/c/Users/User/AppData/Roaming/npm/node_modules/node-gyp" "-Dnode_lib_file=/home/davidfekke/.cache/node-gyp/20.8.1/<(target_arch)/node.lib" "-Dmodule_root_dir=/home/davidfekke/node/projects/jaxnodenative/cplusplus" "-Dnode_engine=v8" "--depth=." "-Goutput_dir=." "--generator-output=build" -I/home/davidfekke/node/projects/jaxnodenative/cplusplus/build/config.gypi -I/mnt/c/Users/User/AppData/Roaming/npm/node_modules/node-gyp/addon.gypi -I/home/davidfekke/.cache/node-gyp/20.8.1/include/node/common.gypi "--toplevel-dir=." binding.gyp
-Makefile: $(srcdir)/binding.gyp $(srcdir)/../../../../.cache/node-gyp/20.8.1/include/node/common.gypi $(srcdir)/build/config.gypi $(srcdir)/../../../../../../mnt/c/Users/User/AppData/Roaming/npm/node_modules/node-gyp/addon.gypi
+Makefile: $(srcdir)/../../../../.cache/node-gyp/20.8.1/include/node/common.gypi $(srcdir)/../../../../../../mnt/c/Users/User/AppData/Roaming/npm/node_modules/node-gyp/addon.gypi $(srcdir)/build/config.gypi $(srcdir)/binding.gyp
 	$(call do_cmd,regen_makefile)
 
 # "all" is a concatenation of the "all" targets from all the included
